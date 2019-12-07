@@ -9,10 +9,11 @@
 
 <script>
 import { createNamespacedHelpers } from 'vuex';
-import * as postGetters from '@/store/post/getters';
-import * as postActions from '@/store/post/actions';
+import { NAMESPACE } from '@/store/modules/post';
+import * as postGetters from '@/store/modules/post/getters';
+import * as postActions from '@/store/modules/post/actions';
 
-const postListHelper = createNamespacedHelpers('post');
+const postListHelper = createNamespacedHelpers(NAMESPACE);
 
 export default {
   name: 'home',
@@ -23,13 +24,14 @@ export default {
     }),
   },
   methods: {
-    ...postListHelper.mapActions([postActions.ADD_POST]),
+    ...postListHelper.mapActions([postActions.SET_NEW_ITEM_ASYNC]),
     onClick() {
-      this[postActions.ADD_POST]({
+      this[postActions.SET_NEW_ITEM_ASYNC]({
         item: {
           title: '추가 하는 포스트',
           content: '포스트 내용입니다.',
           isDone: true,
+          time: Date.now(),
         },
       });
     },
