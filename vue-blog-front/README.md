@@ -5,7 +5,7 @@
 Large Scale Project 에서도 활용할 수 있도록 체계화 시키는것이 중요하다
 
 ## 1. vuex 모듈화 기본 폴더 구조
-
+```
     .
     ├── ...
     ├── store      // vuex store를 모아둔 디렉토리
@@ -19,12 +19,14 @@ Large Scale Project 에서도 활용할 수 있도록 체계화 시키는것이 
     |   |   └── ...
     |   └── index.js
     ├── ...
+```
 
 ## 2. post폴더를 분석해보자
 
 1. state.js
 post 모델에서 사용될 데이터담는 코드
 
+```
     ./store/Modules/post/state.js
     
     export default {
@@ -46,10 +48,12 @@ post 모델에서 사용될 데이터담는 코드
         currentFilter: 'All',
       },
     };
+```
 
 2. getters.js
     post 모델에서 state를 가져올때 사용하는 코드
 
+```
     ./store/Modules/post/getters.js
     
     // 각각의 기능을 상수화 함으로써,
@@ -63,6 +67,7 @@ post 모델에서 사용될 데이터담는 코드
       [DONE_ITEMS]: state => state.items.filter(post => post.isDone),
       [ALL_ITEMS]: state => state.items,
     };
+```
 
 3. mutations.js
     post 모델에서 state 값을 변경하는데 사용하는 코드
@@ -70,6 +75,7 @@ post 모델에서 사용될 데이터담는 코드
    state를 각각 콤포넌트에서 무분별하게 변경하게 되면
    프로젝트 상태 관리가 상당히 힘들어지는 부분이 있기 때문이다
 
+```
     ./store/Modules/post/mutations.js
     
     export const SET_NEW_ITEM = 'SET_NEW_ITEM';
@@ -80,6 +86,7 @@ post 모델에서 사용될 데이터담는 코드
         state.items.push(newItem);
       },
     };
+```
 
 4. actions.js
     post 모델에서 mutation에 값을 전달해주기 위해 사용되는 코드
@@ -87,6 +94,7 @@ post 모델에서 사용될 데이터담는 코드
     actions에서 commit으로 mutation에 전달하도록 약속한다
     state 관리를 쉽게하고, 혼선을 줄일 수 있다
 
+```
     ./store/Modules/post/mutations.js
     
     export const SET_NEW_ITEM = 'SET_NEW_ITEM';
@@ -97,6 +105,7 @@ post 모델에서 사용될 데이터담는 코드
         state.items.push(newItem);
       },
     };
+```
 
 4. index.js
     state,getters,actions,mutations를 모두 import 시켜서,
@@ -104,6 +113,7 @@ post 모델에서 사용될 데이터담는 코드
     vuex의 createNamespacedHelpers 헬퍼 함수를 사용하여 네임스페이스를 지정하면
     좀더 효율적으로 활용 가능하다
 
+```
     ./store/Modules/post/index.js
     
     import { createNamespacedHelpers } from 'vuex';
@@ -126,12 +136,14 @@ post 모델에서 사용될 데이터담는 코드
       mutations,
       getters,
     };
+```
 
 ## 3. /store/index.js 코드 작성하기
 
 - 이제 작성된 모듈을 하나의 파일로 모으는 작업을 해야한다.
 - 아래와 같이 작성하면 된다.
 
+```
     ./src/store/index.js
     
     import Vue from 'vue';
@@ -145,11 +157,13 @@ post 모델에서 사용될 데이터담는 코드
         post,
       },
     });
+```
 
 ## 4. 작성한 Vuex를 컴포넌트에서 사용해 보자
 
 1. getter를 사용해보자
 
+```
     ./src/views/Home.vue
     
     <template>
@@ -193,9 +207,11 @@ post 모델에서 사용될 데이터담는 코드
         border: 1px;
       }
     </style>
+```
 
 2. actions를 사용해보자
 
+```
     ./src/views/Home.vue
     
     <template>
@@ -248,6 +264,7 @@ post 모델에서 사용될 데이터담는 코드
         border: 1px;
       }
     </style>
+```
 
 ## 추가설명
 
