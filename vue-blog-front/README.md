@@ -1,29 +1,4 @@
 # vue-blog-front
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Project 정리 글
+kay [정리문서](https://www.notion.so/9b102abbc2784c45a33e1f1844ffa607?v=09de9c4470264759b0aa8e18de37010a).
