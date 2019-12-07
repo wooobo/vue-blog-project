@@ -8,7 +8,7 @@
     **TIP.
     vue-cli에서의 "@"는 "/src"를 가르키는 별칭이다.**
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ee8a9ac6-f1c3-4026-a0d8-a091046a1ea6/_2019-11-30__4.58.04.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ee8a9ac6-f1c3-4026-a0d8-a091046a1ea6/_2019-11-30__4.58.04.png)
+![https://user-images.githubusercontent.com/12059592/70378348-878ee600-1962-11ea-99af-0509c35008a9.png](https://user-images.githubusercontent.com/12059592/70378348-878ee600-1962-11ea-99af-0509c35008a9.png)
 
 ## 2. 폴더 구조 파악하기
 
