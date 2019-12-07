@@ -1,4 +1,4 @@
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/09049484-7ac1-4603-aa1a-01786034e212/_2019-12-08__1.23.10.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/09049484-7ac1-4603-aa1a-01786034e212/_2019-12-08__1.23.10.png)
+![https://user-images.githubusercontent.com/12059592/70378349-8b226d00-1962-11ea-9059-f9d6e69e2145.png](https://user-images.githubusercontent.com/12059592/70378349-8b226d00-1962-11ea-9059-f9d6e69e2145.png)
 
 ## 1. vuex - { mapState } 출력해보기
 
