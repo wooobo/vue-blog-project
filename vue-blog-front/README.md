@@ -5,6 +5,7 @@
 - 아래 와 같이 코드를 작성
 - state 부분에 데이터임시 데이터를 작성
 
+```
     ./src/store/index.js
     
     import Vue from 'vue';
@@ -32,9 +33,11 @@
       modules: {
       },
     });
+```
 
 ## 2. component에서 mapState를 받아 사용해보기
 
+```
     ./src/views/Home.vue
     
     <template>
@@ -62,11 +65,13 @@
         border: 1px;
       }
     </style>
+```
 
 ## 3. component에서 mapGetters로 state가져오기
 
 - getters를 위와 같이 작성합니다.
 
+```
     ./src/store/index.js
     
     import Vue from 'vue';
@@ -99,9 +104,11 @@
       modules: {
       },
     });
+```
 
 - store getter에 지정한 'ActiveItems'가 출력되는것을 확인 할 수 있습니다.
 
+```
     ./src/views/Home.vue
     
     <template>
@@ -137,11 +144,13 @@
         border: 1px;
       }
     </style>
+```
 
 ## 4. component에서 mapMutations 사용하기
 
 - mutations에 'MutationAddItem' 함수를 정의 한다.
 
+```
     ./src/store/index.js
     
     import Vue from 'vue';
@@ -177,12 +186,14 @@
       modules: {
       },
     });
+```
 
 - mapMutations를 주입시킨다.
 - methods안에 "...mapMutations(['MutationAddItem']),"를 정의한다.
 - 정의된 mutation은 this 로 접근이 가능하다
 - ex) this.MutationAddItem(payload);
 
+```
     ./src/views/Home.vue
     
     <template>
@@ -231,11 +242,13 @@
         border: 1px;
       }
     </style>
+```
 
 ## 4. component에서 mapActions 사용하기
 
 - actions에 'ActionAddItem' 메소드를 정의함.
 
+```
     ./src/store/index.js
     
     import Vue from 'vue';
@@ -274,11 +287,13 @@
       modules: {
       },
     });
+```
 
 - vuex에서 "mapActions" 를 가져옴
 - ...mapActions(['ActionAddItem']), 정의
 - @click="onMutation" 함수 작동 확인
 
+```
     ./src/views/Home.vue
     <template>
       <div class="home">
@@ -334,3 +349,4 @@
         border: 1px;
       }
     </style>
+```
