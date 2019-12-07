@@ -1,4 +1,4 @@
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4c4f5202-2438-483f-8973-cc0482a41936/_2019-12-08__1.25.19.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4c4f5202-2438-483f-8973-cc0482a41936/_2019-12-08__1.25.19.png)
+![https://user-images.githubusercontent.com/12059592/70378351-8e1d5d80-1962-11ea-815a-67f4be55d85c.png](https://user-images.githubusercontent.com/12059592/70378351-8e1d5d80-1962-11ea-815a-67f4be55d85c.png)
 
 > ./src/store/index.js는 모든 모듈을 import 받는다
 각각의 Model을 Module화 하여, 
