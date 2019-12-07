@@ -14,6 +14,6 @@ export default {
 
 <style lang='scss' scoped>
   .home {
-    border: 1pxl
+    border: 1px;
   }
 </style>
