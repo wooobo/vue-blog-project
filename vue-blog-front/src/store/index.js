@@ -19,8 +19,14 @@ export default new Vuex.Store({
     ],
   },
   mutations: {
+    MutationAddItem(state, payload) {
+      state.items.push(payload);
+    },
   },
   actions: {
+    ActionAddItem({ commit }, payload) {
+      commit('MutationAddItem', payload);
+    },
   },
   getters: {
     ActiveItems: state => state.items.filter(item => item.isActive),
